@@ -379,24 +379,24 @@ HRESULT BaseApp::OnRender()
 
 	m_pD2DHRT->FillRectangle(D2D1::RectF(50.f,50.f,250.f,250.f), m_pD2DSolidBrush02);
 
-	m_pD2DHRT->FillRectangle(D2D1::RectF(100.f, 100.f, 200.f, 200.f), m_pD2DSolidBrush03);
-	m_pD2DHRT->DrawRectangle(D2D1::RectF(100.f, 100.f, 200.f, 200.f), m_pD2DSolidBrush01, 1, NULL);
+	//m_pD2DHRT->FillRectangle(D2D1::RectF(100.f, 100.f, 200.f, 200.f), m_pD2DSolidBrush03);
+	//m_pD2DHRT->DrawRectangle(D2D1::RectF(100.f, 100.f, 200.f, 200.f), m_pD2DSolidBrush01, 1, NULL);
 
-	m_pD2DHRT->FillEllipse(D2D1::Ellipse(D2D1::Point2F(200.f, 300.f), 120.f, 120.f), m_pLinearGradientBrush01);
+	//m_pD2DHRT->FillEllipse(D2D1::Ellipse(D2D1::Point2F(200.f, 300.f), 120.f, 120.f), m_pLinearGradientBrush01);
 
-	m_pD2DHRT->DrawLine(D2D1::Point2F(200.f, 300.f), D2D1::Point2F(320.f, 300.f), m_pD2DSolidBrush05,5.0f);
+	//m_pD2DHRT->DrawLine(D2D1::Point2F(200.f, 300.f), D2D1::Point2F(320.f, 300.f), m_pD2DSolidBrush05,5.0f);
 
-	wchar_t wcstring[50];
+	//wchar_t wcstring[50];
 
-	swprintf(wcstring, 15, L"Constant text");
+	//swprintf(wcstring, 15, L"Constant text");
 
-	m_pD2DHRT->DrawTextA(
-		wcstring,
-		wcslen(wcstring),
-		m_pDWriteTextFormat,
-		D2D1::RectF(50.0f, 50.0f, 300.0f, 100.0f),
-		m_pD2DSolidBrush05
-	);
+	//m_pD2DHRT->DrawTextA(
+	//	wcstring,
+	//	wcslen(wcstring),
+	//	m_pDWriteTextFormat,
+	//	D2D1::RectF(50.0f, 50.0f, 300.0f, 100.0f),
+	//	m_pD2DSolidBrush05
+	//);
 
 	//m_pD2DHRT->DrawBitmap(m_pD2DBitMap01,
 	//	D2D1::RectF(250.f,250.f,281.f,281.f),
