@@ -31,10 +31,12 @@ void BaseApp::RunMessageLoop()
 {
 	MSG msg;
 
-	while (GetMessage(&msg, NULL, 0, 0))
-	{
-		TranslateMessage(&msg);
-		DispatchMessage(&msg);
+	while (TRUE) {
+		while (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
+		{
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+		}
 		// Handle your timer related here
 		dwCurrentTime = GetTickCount();
 		dwElapsedTime = dwCurrentTime - dwLastUpdateTime;
@@ -43,9 +45,11 @@ void BaseApp::RunMessageLoop()
 			// Your other frame related variable here.
 			// i.e. frameNumber++
 			// reset it back if it's over the limit of the frames
+			InvalidateRect(m_hwnd, NULL, TRUE);
 		}
-
+		if (msg.message == WM_QUIT) break;
 	}
+
 }
 
 HRESULT BaseApp::CreateDeviceIndependentResources()
