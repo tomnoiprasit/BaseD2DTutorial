@@ -45,6 +45,12 @@ void BaseApp::RunMessageLoop()
 			// Your other frame related variable here.
 			// i.e. frameNumber++
 			// reset it back if it's over the limit of the frames
+			// Basically, this is where you do Game.Update() stuff
+
+			
+
+			// Rest elapsed time to 0
+			dwElapsedTime = 0;
 			InvalidateRect(m_hwnd, NULL, TRUE);
 		}
 		if (msg.message == WM_QUIT) break;
